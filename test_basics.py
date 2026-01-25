@@ -32,7 +32,7 @@ def test_addition_negative_numbers():
     assert result == -9
 
 
-def good_bad_balance():
+def test_good_bad_balance_main():
     good = 10
     bad = 1
 
