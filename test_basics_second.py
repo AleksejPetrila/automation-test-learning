@@ -4,4 +4,4 @@ def good_bad_balance():
 
     balance = good - bad
 
-    assert balance >= 0
+    assert balance >= 1
