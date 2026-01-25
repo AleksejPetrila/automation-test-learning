@@ -30,3 +30,12 @@ def test_addition_negative_numbers():
     result = a + b
 
     assert result == -9
+
+
+def good_bad_balance():
+    good = 10
+    bad = 1
+
+    balance = good - bad
+
+    assert balance >= 1
