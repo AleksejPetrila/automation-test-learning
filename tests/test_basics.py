@@ -39,3 +39,14 @@ def test_good_bad_balance_main():
     balance = good - bad
 
     assert balance >= 2
+
+
+def test_the_suspect():
+    a = "Mary"
+    b = "Billy"
+    c = "Mittens"
+    d = "An evil mr. Jenkins"
+
+    released = c
+
+    assert released != "An evil mr. Jenkins"
