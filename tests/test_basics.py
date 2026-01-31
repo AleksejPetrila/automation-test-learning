@@ -38,4 +38,4 @@ def test_good_bad_balance_main():
 
     balance = good - bad
 
-    assert balance >= 0
+    assert balance >= 2
