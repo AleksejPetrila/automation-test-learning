@@ -71,13 +71,24 @@ def test_division(sample_numbers):
     assert result == 0.5
 
 
-def test_addition_with_cleanup(numbers_with_cleanup):
-    a, b = numbers_with_cleanup
+def test_addition_with_cleanup(sample_numbers_with_cleanup):
+    a, b = sample_numbers_with_cleanup
     result = a + b
-    assert result == 5
+    assert result == 11
 
 
 def test_second_test_with_cleanup(sample_numbers_with_cleanup):
     a, b = sample_numbers_with_cleanup
     result = a - b
     assert result == -1
+
+
+def test_add(scoped_numbers):
+    a, b = scoped_numbers
+    assert a + b == 10
+
+
+def test_multiply(scoped_numbers):
+    a, b = scoped_numbers
+    assert a * b == 24
+
