@@ -50,3 +50,9 @@ def test_the_suspect():
     released = c
 
     assert released != "An evil mr. Jenkins"
+
+
+def test_addition_with_fixtures(sample_numbers):
+    a, b = sample_numbers
+    result = a + b
+    assert result == 15
