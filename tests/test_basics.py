@@ -41,18 +41,31 @@ def test_good_bad_balance_main():
     assert balance >= 2
 
 
-def test_the_suspect():
-    a = "Mary"
-    b = "Billy"
-    c = "Mittens"
-    d = "An evil mr. Jenkins"
-
+def test_the_suspect(list_of_suspects):
+    a, b, c, d, e = list_of_suspects
     released = c
-
-    assert released != "An evil mr. Jenkins"
+    assert released != "Evil Mr. Jenkins"
 
 
 def test_addition_with_fixtures(sample_numbers):
     a, b = sample_numbers
     result = a + b
     assert result == 15
+
+
+def test_subtraction(sample_numbers):
+    a, b = sample_numbers
+    result = a - b
+    assert result == 5
+
+
+def test_multiplication(sample_numbers):
+    a, b = sample_numbers
+    result = a * b
+    assert result == 50
+
+
+def test_division(sample_numbers):
+    a, b = sample_numbers
+    result = b / a
+    assert result == 0.5
