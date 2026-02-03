@@ -27,3 +27,13 @@ def test_addition_parametrized(a, b, expected):
 def test_check_bets(bet, no_bet, winner):
     result = winner
     assert result == bet
+
+
+@pytest.mark.smoke
+def test_basic_addition():
+    assert 1 + 1 == 2
+
+
+@pytest.mark.regression
+def test_complex_logic():
+    assert 10 * 2 == 20
