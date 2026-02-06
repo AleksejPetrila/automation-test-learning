@@ -12,7 +12,9 @@ def test_get_users_list():
     assert "data" in body
     assert len(body["data"]) > 0
 
+
 BASE_URL = "https://jsonplaceholder.typicode.com"
+
 
 @pytest.mark.api
 def test_get_users_list():
@@ -27,3 +29,4 @@ def test_get_users_list():
     first_user = body[0]
     assert "id" in first_user
     assert "email" in first_user
+    assert first_user["username"] == "Bret"

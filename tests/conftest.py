@@ -26,3 +26,16 @@ def scoped_numbers():
     print("\n[SETUP] module fixture")
     yield (4, 6)
     print("\n[TEARDOWN] module fixture")
+
+
+@pytest.fixture
+def base_url():
+    return "https://jsonplaceholder.typicode.com"
+
+
+@pytest.fixture
+def api_headers():
+    return {
+        "Accept": "application/json",
+        "User-Agent": "pytest-api-tests",
+    }
