@@ -1,4 +1,5 @@
 import pytest
+from src.api.api_client import APIClient
 
 
 @pytest.fixture
@@ -39,3 +40,8 @@ def api_headers():
         "Accept": "application/json",
         "User-Agent": "pytest-api-tests",
     }
+
+
+@pytest.fixture(scope="session")
+def api_client(base_url, api_headers):
+    return APIClient(base_url=base_url, headers=api_headers)

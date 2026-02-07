@@ -1,0 +1,5 @@
+USERS = "/users"
+POSTS = "/posts"
+COMMENTS = "/comments"
+TODOS = "/todos"
+ALBUMS = "/albums"
