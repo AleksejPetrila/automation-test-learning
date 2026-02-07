@@ -13,12 +13,10 @@ def test_get_users_list():
     assert len(body["data"]) > 0
 
 
-BASE_URL = "https://jsonplaceholder.typicode.com"
-
 
 @pytest.mark.api
-def test_get_users_list():
-    response = requests.get(f"{BASE_URL}/users", timeout=10)
+def test_get_users_list(base_url, api_headers):
+    response = requests.get(f"{base_url}/users", timeout=10)
 
     assert response.status_code == 200
 
