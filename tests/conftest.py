@@ -42,6 +42,6 @@ def api_headers():
     }
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def api_client(base_url, api_headers):
     return APIClient(base_url=base_url, headers=api_headers)
