@@ -29,19 +29,20 @@ def scoped_numbers():
     print("\n[TEARDOWN] module fixture")
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def base_url():
     return "https://jsonplaceholder.typicode.com"
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def api_headers():
     return {
         "Accept": "application/json",
+        "Content-Type": "application/json",
         "User-Agent": "pytest-api-tests",
     }
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def api_client(base_url, api_headers):
     return APIClient(base_url=base_url, headers=api_headers)
