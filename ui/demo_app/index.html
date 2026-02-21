@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo App</title>
+</head>
+<body>
+  <h1>Login Page</h1>
+
+  <label>
+    Username:
+    <input id="username" type="text" />
+  </label>
+  <br/><br/>
+
+  <label>
+    Password:
+    <input id="password" type="password" />
+  </label>
+  <br/><br/>
+
+  <button id="login-btn">Login</button>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("login-btn").addEventListener("click", function() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (username === "admin" && password === "secret") {
+        message.textContent = "Login successful";
+      } else {
+        message.textContent = "Invalid credentials";
+      }
+    });
+  </script>
+</body>
+</html>
