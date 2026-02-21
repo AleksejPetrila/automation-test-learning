@@ -7,6 +7,7 @@ from src.api.schemas import POST_SCHEMA
 
 
 @pytest.mark.api
+@pytest.mark.smoke
 def test_update_post_put(api_client):
     post_id = 1
     payload = put_post_payload(post_id=post_id)
@@ -21,6 +22,7 @@ def test_update_post_put(api_client):
 
 
 @pytest.mark.api
+@pytest.mark.smoke
 def test_update_post_patch(api_client):
     post_id = 1
     payload = {"title": "Partially updated title"}
@@ -35,6 +37,7 @@ def test_update_post_patch(api_client):
 
 
 @pytest.mark.api
+@pytest.mark.regression
 def test_delete_post(api_client):
     post_id = 1
     response = api_client.delete(f"{POSTS}/{post_id}")
@@ -42,6 +45,7 @@ def test_delete_post(api_client):
 
 
 @pytest.mark.api
+@pytest.mark.regression
 def test_get_single_post_schema(api_client):
     response = api_client.get(f"{POSTS}/1")
     assert response.status_code == 200
@@ -51,6 +55,7 @@ def test_get_single_post_schema(api_client):
 
 
 @pytest.mark.api
+@pytest.mark.regression
 def test_get_posts_list_schema(api_client):
     response = api_client.get(POSTS)
     assert response.status_code == 200
