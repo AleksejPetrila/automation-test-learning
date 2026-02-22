@@ -15,5 +15,6 @@ class LoginPage:
         self.password_input.fill(password)
         self.login_button.click()
 
-    def get_message_text(self):
-        return self.message.text_content()
+    def expect_message(self, expected_text):
+        from playwright.sync_api import expect
+        expect(self.message).to_have_text(expected_text)

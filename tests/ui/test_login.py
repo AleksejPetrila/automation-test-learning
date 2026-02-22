@@ -9,8 +9,7 @@ def test_login_success(page, demo_server_url):
     login_page = LoginPage(page)
     login_page.open(demo_server_url)
     login_page.login("admin", "secret")
-
-    expect(page.locator("#message")).to_have_text("Login successful")
+    login_page.expect_message("Login successful")
 
 
 @pytest.mark.ui
@@ -19,5 +18,4 @@ def test_login_invalid_credentials(page, demo_server_url):
     login_page = LoginPage(page)
     login_page.open(demo_server_url)
     login_page.login("wrong", "wrong")
-
-    expect(page.locator("#message")).to_have_text("Invalid credentials")
+    login_page.expect_message("Invalid credentials")
