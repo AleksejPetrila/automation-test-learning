@@ -9,7 +9,7 @@
 
   <label>
     Username:
-    <input id="username" type="text" />
+    <input id="user-input" type="text" />
   </label>
   <br/><br/>
 
@@ -19,13 +19,13 @@
   </label>
   <br/><br/>
 
-  <button id="login-btn">Login</button>
+  <button id="user-input-btn">Login</button>
 
   <p id="message"></p>
 
   <script>
-    document.getElementById("login-btn").addEventListener("click", function() {
-      const username = document.getElementById("username").value;
+    document.getElementById("user-input-btn").addEventListener("click", function() {
+      const username = document.getElementById("user-input").value;
       const password = document.getElementById("password").value;
       const message = document.getElementById("message");
 
