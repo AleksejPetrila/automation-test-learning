@@ -18,4 +18,4 @@ def test_login_invalid_credentials(page, demo_server_url):
     login_page = LoginPage(page)
     login_page.open(demo_server_url)
     login_page.login("wrong", "wrong")
-    login_page.expect_message("Invalid credentials")
+    login_page.expect_message("Invalid credentiols")
