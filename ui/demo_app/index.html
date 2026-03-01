@@ -9,27 +9,34 @@
 
   <label>
     Username:
-    <input id="user-input" type="text" />
+    <input id="user-input" data-testid="username-input" type="text" />
   </label>
   <br/><br/>
 
   <label>
     Password:
-    <input id="password" type="password" />
+    <input id="password" data-testid="password-input" type="password" />
   </label>
   <br/><br/>
 
-  <button id="user-input-btn">Login</button>
+  <label>
+    Age:
+    <input id="age-input" data-testid="age-input" type="text" />
+  </label>
+  <br/><br/>
 
-  <p id="message"></p>
+  <button id="user-input-btn" data-testid="login-button">Login</button>
+
+  <p id="message" data-testid="message"></p>
 
   <script>
     document.getElementById("user-input-btn").addEventListener("click", function() {
       const username = document.getElementById("user-input").value;
       const password = document.getElementById("password").value;
+      const age = document.getElementById("age-input").value;
       const message = document.getElementById("message");
 
-      if (username === "admin" && password === "secret") {
+      if (username === "admin" && password === "secret" && age === "2") {
         message.textContent = "Login successful";
       } else {
         message.textContent = "Invalid credentials";
